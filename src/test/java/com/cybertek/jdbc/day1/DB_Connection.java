@@ -39,6 +39,9 @@ public class DB_Connection {
         System.out.println("second column value: " + rs.getString(2));
         System.out.println("second column value: " + rs.getString("REGION_NAME"));
 
+        rs.close();
+        stmnt.close();
+        conn.close();
 
 
 

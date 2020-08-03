@@ -23,6 +23,23 @@ public class movingForwardAndBackWardwithResult {
         rs.previous();// bir oncekine tekrar doner yani 1.ye
         System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
 
+      //rs.previous(); we repeat this will move us to before first location
+     //   System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
+
+//moving the last row directly
+      rs.last();
+        System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
+      rs.first();
+        System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
+      //random or specific location that we chosed
+        rs.absolute(5);
+        System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
+
+      rs.beforeFirst();//tekrar en basa doner
+       // System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
+
+        rs.afterLast();//en sona doner
+     //   System.out.println(rs.getString("country_id")+" "+rs.getString("country_name"));
 
 
 

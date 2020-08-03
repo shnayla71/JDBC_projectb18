@@ -28,6 +28,9 @@ public class IteratingResultsetBackWard {
         rs.last();
         System.out.println(rs.getString(1)+" "+rs.getString(2));
 
+       //how do I know which row number i am right now at this location
+        System.out.println("rs.getRow() = "+ rs.getRow());
+
 
 
     }

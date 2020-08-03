@@ -10,7 +10,24 @@ public class IteratingResultsetBackWard {
         String password="hr";
         Connection conn= DriverManager.getConnection(connectionStr,username,password) ;
         Statement stmnt=conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-        ResultSet rs=stmnt.executeQuery("SELECT * FROM COUNTRIES");
+        ResultSet rs=stmnt.executeQuery("SELECT * FROM REGIONS");
+
+        rs.afterLast();//sondan basa dogru siralar
+
+        while(rs.previous()==true){
+            System.out.println(rs.getString(1)+" "+rs.getString(2));
+        }
+
+        System.out.println("=====================");
+       rs.absolute(2);
+        System.out.println(rs.getString(1)+" "+rs.getString(2));
+
+        rs.first();
+        System.out.println(rs.getString(1)+" "+rs.getString(2));
+
+        rs.last();
+        System.out.println(rs.getString(1)+" "+rs.getString(2));
+
 
 
     }

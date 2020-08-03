@@ -21,5 +21,6 @@ public class test_Connection {
         } catch (SQLException throwables) {
             System.err.println("CONNECTION WAS NOT SUCCESSFUL \n" + throwables.getMessage());
         }
+        System.out.println("good job");
     }
 }

@@ -23,6 +23,27 @@ public class DB_Connection {
 
         //resultset object is what we use to store the actual result we get from query
         ResultSet rs=stmnt.executeQuery("SELECT * FROM REGIONS");
+      // next() method is used to move the cursor and return the result as boolean
+      rs.next();//row da ilerler yukardan asagi
+      //getting the column data we use multiple get methods
+        System.out.println("first column value: " + rs.getString(1));
+        System.out.println("first column name value: " + rs.getString("REGION_ID"));
+        System.out.println();
+        System.out.println("second column value: " + rs.getString(2));
+        System.out.println("second column value: " + rs.getString("REGION_NAME"));
+        System.out.println("========================================");
+      rs.next(); // bir diger rowa gecmek icin
+        System.out.println("first column value: " + rs.getString(1));
+        System.out.println("first column name value: " + rs.getString("REGION_ID"));
+        System.out.println();
+        System.out.println("second column value: " + rs.getString(2));
+        System.out.println("second column value: " + rs.getString("REGION_NAME"));
+
+
+
+
+
+
 
 
 

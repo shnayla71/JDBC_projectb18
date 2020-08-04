@@ -18,7 +18,7 @@ public class Utilities {
          * Throws exception in connection failed
          */
         public static void createConnection() {
-            String dbUrl = "jdbc:oracle:thin:@54.152.21.73:1521:xe";
+            String dbUrl = "jdbc:oracle:thin:@54.152.243.99:1521:xe";
             String dbUsername = "hr";
             String dbPassword = "hr";
             try {

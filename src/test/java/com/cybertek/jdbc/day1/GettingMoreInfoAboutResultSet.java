@@ -1,6 +1,8 @@
 package com.cybertek.jdbc.day1;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GettingMoreInfoAboutResultSet {
 
@@ -25,10 +27,14 @@ public class GettingMoreInfoAboutResultSet {
 
         // how to list all column name from the ResultSet
         for(int i=1;i<=columnCount;i++){
-            System.out.println(rsmd.getColumnName(i)+" ");
+            System.out.println("number "+i+ " column name is: "+ rsmd.getColumnName(i));
         }
 
-
+        List<String> columnNameList=new ArrayList<>();
+        for(int i=1;i<=columnCount;i++){
+            columnNameList.add(rsmd.getColumnName(i));
+        }
+        System.out.println("Column name list: "+columnNameList);
 
     }
 }

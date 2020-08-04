@@ -13,20 +13,20 @@ public class DB_Practice {
       rs.next();
         System.out.println(rs.getString(1));
 
-      while(rs.next()){
+    while(rs.next()){
           System.out.println(rs.getString(1));
       }
 
         System.out.println("Column count: "+  DB_Utility.getColumnCNT());
 
 
-
-
-
-
    // what if we want to print out everthing in the resultSEt
     //without knowing the column names
-
+      int colcount=DB_Utility.getColumnCNT();
+      rs.first();
+      for(int i=1;i<=colcount;i++){
+          System.out.print(rs.getString(i)+"\t");
+      }
 
 
     }
